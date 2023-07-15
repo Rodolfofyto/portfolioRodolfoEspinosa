@@ -38,11 +38,12 @@ header>section {
     min-width: 300px;
 }
 
-header>section>h1 {
+header>section>h1>a{
     font-size: 3vw;
     letter-spacing: 6px;
-    text-shadow: 0px 0px 15px #0b091e;
+    text-shadow: 2px 2px 15px #000000;
     margin-bottom: 1%;
+    color: #ffffff;
 }
 
 header>section>h1>a:hover {
