@@ -6,32 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Rodolfo Espinosa</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas:
+                'ma fig';
+            grid-gap: 5px;
+            margin: 2%;
+        }
+
+        main>section {
+            grid-area: ma;
+            margin: 5%;
+        }
+
+        main>section>h1 {
+            font-size: 2vw;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1c1c1c;
+            margin-top: 2%;
+            padding-bottom: 2%;
+        }
+
+
+        main>figure {
+            grid-area: fig;
+        }
+
+        /* CUANDO EL ANCHO SEA INFERIOR A 700PX */
+        @media screen and (max-width:700px) {
+            main {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-areas:
+                    'ma ma'
+                    'fig fig';
+                grid-gap: 5px;
+                margin: 2%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <figure>
-            <a href="index.html"><img src="img/rodolfo.JPG" alt="rodolfo" title="rodolfo" /></a>
-        </figure>
-        <section>
-            <h1><a href="index.html">Rodolfo Espinosa Díaz</a></h1>
-            <p><a href="mailto:gcaribe14@gmail.com">Email: gcaribe14@gmail.com</a></p>
-            <p><a href="tel:+34640856854" tel="+34640856854">Telef: +34 640 856 854</a></p>
-        </section>
+        <h1><a href="index.html">Rodolfo Espinosa Díaz</a></h1>
+        <p><a href="aboutme.html">Web Developer / Licenciado en Turismo</a></p>
+        <p><a href="mailto:espinosadiazrodolfo@gmail.com">Email: espinosadiazrodolfo@gmail.com</a></p>
+        <p><a href="tel:+34640856854" tel="+34640856854">Telef: +34 640 856 854</a></p>
     </header>
     <nav>
         <ul>
             <li>
-                <a href="aboutme.html">Sobre mi</a>
+                <a href="aboutme.html">About me</a>
             </li>
             <li>
                 <a href="skills.html">Skills</a>
             </li>
             <li>
-                <a href="proyect.html">Proyects</a>
+                <a href="proyect.html">Projects</a>
             </li>
             <li>
-                <a href="contact.html">Contacto</a>
+                <a href="contact.html">Contact</a>
             </li>
             <li>
                 <img src="img/es.png" alt="español" title="español" />
@@ -41,7 +79,18 @@
             </li>
         </ul>
     </nav>
-    <main></main>
+    <main>
+        <section>
+            <p>Hi, I am</p>
+            <h1><a href="index.html">Rodolfo Espinosa Díaz</a></h1>
+            <h2>Web Developer / Licenciado en Turismo</h2>
+            <p><a href="mailto:espinosadiazrodolfo@gmail.com">Email: espinosadiazrodolfo@gmail.com</a></p>
+            <p><a href="tel:+34640856854" tel="+34640856854">Telef: +34 640 856 854</a></p>
+        </section>
+        <figure>
+            <a href="index.html"><img src="img/banerSitpng.png" alt="rodolfo" title="rodolfo" /></a>
+        </figure>
+    </main>
     <footer>
         <p>&copy;2023 Rodolfo Espinosa / Todos los derechos reservados / <a href="cookies.html">Política de cookkies
             </a>-<a href="pprivac.html"> Política de privacidad</a></p>

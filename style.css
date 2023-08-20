@@ -18,7 +18,7 @@ li {
 }
 
 #activo {
-    color: rgb(22, 163, 0);
+    background-color: #6d6d6d;
 }
 
 /* HEADER */
@@ -26,37 +26,34 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
+    padding: 1%;
 }
 
-header>figure {
+header>h1 {
+    flex: 4;
+    min-width: 300px;
+    text-transform: uppercase;
+}
+
+header>p {
     flex: 1;
     min-width: 300px;
+    font-size: 1.3vw;
 }
 
-header>section {
-    flex: 5;
-    min-width: 300px;
-}
-
-header>section>h1>a{
-    font-size: 3vw;
-    letter-spacing: 6px;
+header>h1>a {
+    font-size: 1.5vw;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 15px #000000;
-    margin-bottom: 1%;
-    color: #ffffff;
+    color: #444343;
 }
 
-header>section>h1>a:hover {
+header>h1>a:hover {
     color: #000dff;
 }
 
-header>section p {
-    margin-top: 1%;
-    font-size: 1.5vw;
-    letter-spacing: 4px;
-}
-
-header>section p>a:hover {
+header>p>a:hover {
     color: #000dff;
 }
 

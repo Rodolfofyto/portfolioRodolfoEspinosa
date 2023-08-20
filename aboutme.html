@@ -6,32 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mi</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 22% 25% 25% auto;
+            grid-template-areas:
+                'art art set set'
+                'art art set set'
+                'asi asi set set'
+                'asi asi set set'
+            ;
+            grid-gap: 5px;
+            margin: 0;
+            padding: 2%;
+            border-radius: none;
+        }
+
+        main h3,
+        h4 {
+            text-align: center;
+            margin-bottom: 5%;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+            color: rgb(133, 127, 127);
+        }
+
+        main>article {
+            grid-area: art;
+            text-align: justify;
+        }
+
+        main>article>p {
+            margin-bottom: 2%;
+            margin-right: 2%;
+            padding: 1%;
+
+        }
+
+        main>aside {
+            grid-area: asi;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        main>section {
+            grid-area: set;
+        }
+
+        main>aside>section>table>tbody>tr>td>a:hover{
+            color: #000dff;
+            text-shadow: 2px 2px 15px #000000;
+        }
+
+
+
+        /* CUANDO EL ANCHO SEA INFERIOR A 700PX */
+        @media screen and (max-width:700px) {
+            main {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                grid-template-areas:
+                    'art art art art'
+                    'art art art art'
+                    'asi asi asi asi'
+                    'set set set set'
+                    'set set set set'
+                ;
+                grid-gap: 5px;
+                margin: 0;
+                padding: 2%;
+                border-radius: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <figure>
-            <a href="index.html"><img src="img/rodolfo.JPG" alt="rodolfo" title="rodolfo" /></a>
-        </figure>
-        <section>
-            <h1><a href="index.html">Rodolfo Espinosa Díaz</a></h1>
-            <p><a href="mailto:gcaribe14@gmail.com">Email: gcaribe14@gmail.com</a></p>
-            <p><a href="tel:+34640856854" tel="+34640856854">Telef: +34 640 856 854</a></p>
-        </section>
+        <h1><a href="index.html">Rodolfo Espinosa Díaz</a></h1>
+        <p><a href="aboutme.html">Web Developer / Licenciado en Turismo</a></p>
+        <p><a href="mailto:espinosadiazrodolfo@gmail.com">Email: espinosadiazrodolfo@gmail.com</a></p>
+        <p><a href="tel:+34640856854" tel="+34640856854">Telef: +34 640 856 854</a></p>
     </header>
     <nav>
         <ul>
-            <li>
-                <a href="aboutme.html">Sobre mi</a>
+            <li id="activo">
+                <a href="aboutme.html">About me</a>
             </li>
             <li>
                 <a href="skills.html">Skills</a>
             </li>
             <li>
-                <a href="proyect.html">Proyects</a>
+                <a href="proyect.html">Projects</a>
             </li>
             <li>
-                <a href="contact.html">Contacto</a>
+                <a href="contact.html">Contact</a>
             </li>
             <li>
                 <img src="img/es.png" alt="español" title="español" />
@@ -41,7 +110,105 @@
             </li>
         </ul>
     </nav>
-    <main></main>
+    <main>
+        <article>
+            <h3>Quien soy?</h3>
+            <p>Hola, soy Rodolfo Espinosa Díaz, un apasionado programador web con amplia experiencia en el desarrollo de
+                sitios web interactivos y funcionales. Mi objetivo principal es combinar mi creatividad y habilidades
+                técnicas para crear experiencias digitales atractivas y de alta calidad.</p>
+
+            <p>Con una sólida base en lenguajes de programación como HTML, CSS y JavaScript, he trabajado en diversos
+                proyectos que abarcan desde sitios web corporativos hasta aplicaciones web dinámicas. Mi enfoque
+                principal es desarrollar interfaces de usuario intuitivas y receptivas, utilizando las últimas
+                tecnologías y las mejores prácticas de desarrollo.</p>
+
+            <p>Tengo experiencia en el uso de frameworks, lo que me permite crear
+                aplicaciones web escalables y de alto rendimiento. Además, tengo habilidades en el desarrollo backend
+                utilizando tecnologías de bases de datos como MySQL y MariaDB.</p>
+
+            <p>Me enorgullece trabajar en colaboración con diseñadores y equipos multidisciplinarios para convertir
+                conceptos creativos en soluciones web funcionales. Soy un comunicador efectivo y estoy acostumbrado a
+                trabajar en proyectos con plazos ajustados, manteniendo siempre la calidad y el enfoque en el resultado
+                final.</p>
+
+            <p>Además de mi experiencia laboral, he continuado mi aprendizaje de forma constante, manteniéndome al día
+                con las últimas tendencias y avances en el campo del desarrollo web. Me gusta enfrentar nuevos desafíos
+                y buscar soluciones innovadoras para crear experiencias web excepcionales.</p>
+
+            <p>En mi <a href="skills.html">Portafolio</a>, encontrarás ejemplos concretos de proyectos en los que he
+                trabajado, destacando mi capacidad para enfrentar desafíos técnicos, implementar soluciones efectivas y
+                lograr resultados
+                satisfactorios. Estoy abierto a nuevas oportunidades emocionantes y listo para contribuir con mis
+                habilidades y experiencia en el desarrollo web.</p>
+
+            <p>Si estás buscando un programador web que combine habilidades técnicas sólidas, creatividad y pasión por
+                la excelencia, estaré encantado de trabajar contigo en tu próximo proyecto. No dudes en contactarme para
+                discutir cómo podemos colaborar y lograr resultados sobresalientes juntos.
+                Es valido destacar que antes de iniciarme en el mundo del desrrollo web, Soy licienciado en Turismo, con
+                basta experiencia en la operación hotelera, tal como se puede apreciar en mi CV.</p>
+        </article>
+        <aside>
+            <section>
+                <h3>Redes Sociales</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://instagram.com/rodolfofyto?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><img
+                                        src="" alt="instagram" title="instagram" /></a></td>
+                            <td><a href="https://instagram.com/rodolfofyto?igshid=OGQ5ZDc2ODk2ZA=="
+                                    target="_blank">rodolfo(@rodolfofyto)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.linkedin.com/in/rodolfo-espinosa-d%C3%ADaz-a8b582193"
+                                    target="_blank"><img src="" alt="linkedin" title="linkedin" /></a></td>
+                            <td><a href="https://www.linkedin.com/in/rodolfo-espinosa-d%C3%ADaz-a8b582193"
+                                    target="_blank">rodolfo-espinosa-diaz</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.facebook.com/rodolfo.espinosadiaz.9" target="_blank"><img src=""
+                                        alt="facebook" title="facebook" /></a>
+                            </td>
+                            <td><a href="https://www.facebook.com/rodolfo.espinosadiaz.9"
+                                    target="_blank">rodolfo.espinosadiaz</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://twitter.com/Rodolfo59599810" target="_blank"><img src="" alt="twitter"
+                                        title="twitter" /></a>
+                            </td>
+                            <td><a href="https://twitter.com/Rodolfo59599810" target="_blank">rodolfoespinosadiaz</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h4>Competencias</h4>
+                <ul>
+                    <li>Trabajo en equipo</li>
+                    <li>Liderazgo</li>
+                    <li>Adaptabilidad</li>
+                    <li>Iniciativa</li>
+                    <li>Sociabilidad</li>
+                </ul>
+            </section>
+        </aside>
+        <section>
+            <h3>Experiencia Laboral</h3>
+            <figure>
+                <img src="img/experChateu.png" alt="" title="" />
+            </figure>
+            <figure>
+                <img src="img/experSelenta.png" alt="" title="" />
+            </figure>
+            <figure>
+                <img src="img/experGcaribe.png" alt="" title="" />
+            </figure>
+            <figure>
+                <img src="" alt="" title="" />
+            </figure>
+        </section>
+    </main>
     <footer>
         <p>&copy;2023 Rodolfo Espinosa / Todos los derechos reservados / <a href="cookies.html">Política de cookkies
             </a>-<a href="pprivac.html"> Política de privacidad</a></p>
